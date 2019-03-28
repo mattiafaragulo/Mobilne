@@ -12,8 +12,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textfield: UITextField!
     
-    @IBOutlet weak var output: UILabel!
-    
     var usrTextField = UITextField();
     
     @IBAction func showAlert(_ sender: UIButton) {
@@ -37,18 +35,18 @@ class ViewController: UIViewController {
     func okActionHandler(action: UIAlertAction) {
         let input = Int(usrTextField.text!)
         let fingers = Int.random(in:0...10)
-        let alert = UIAlertController(title: "Alert", message: "Checking...", preferredStyle: .alert  );
+        let alert1 = UIAlertController(title: "Alert", message: "Yes that's correct!", preferredStyle: .alert  );
+        let alert2 = UIAlertController(title: "Alert", message: "No you're wrong!", preferredStyle: .alert  );
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelActionHandler);
-        alert.addAction(cancelAction);
+        alert1.addAction(cancelAction);
+        alert2.addAction(cancelAction);
         
         if input == fingers {
-            alert.addTextField(configurationHandler: alertCorrect);
-            self.present(alert, animated: true, completion: nil);
+            self.present(alert1, animated: true, completion: nil);
         }
         else {
-            alert.addTextField(configurationHandler: alertWrong);
-            self.present(alert, animated: true, completion: nil);
+            self.present(alert2, animated: true, completion: nil);
         }
     }
     
@@ -58,28 +56,6 @@ class ViewController: UIViewController {
         usrTextField = textField;
     }
     
-    func alertCorrect(textField: UITextField) {
-        textField.text = "Yes, that's correct!"
-        textField.isUserInteractionEnabled = false;
-    }
-    
-    func alertWrong(textField: UITextField) {
-        textField.text = "No, you're wrong!";
-        textField.isUserInteractionEnabled = false;
-    }
-    
-    @IBAction func ButtonEvent(_ sender: Any) {
-        let input = Int(textfield.text!)
-        let fingers = Int.random(in:0...10)
-        if input == fingers {
-            print("Yes, that's correct!")
-            output.text = "Yes, that's correct!"
-        }
-        else {
-            print("No, you're wrong!")
-            output.text = "No, you're wrong!"
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -30,27 +30,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CeF-j9-wL7">
-                                <rect key="frame" x="154" y="122" width="97" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jf1-5d-RxM">
-                                <rect key="frame" x="181" y="172" width="43" height="30"/>
-                                <state key="normal" title="Guess"/>
-                                <connections>
-                                    <action selector="ButtonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAo-ep-lvZ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzC-Al-dL3">
-                                <rect key="frame" x="133" y="228" width="151" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eG-Ud-Fy8">
-                                <rect key="frame" x="162" y="262" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eG-Ud-Fy8">
+                                <rect key="frame" x="147.5" y="133" width="80" height="30"/>
                                 <state key="normal" title="Alert Guess"/>
                                 <connections>
                                     <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ULX-nz-YvS"/>
@@ -59,25 +40,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Jf1-5d-RxM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Dq-bF-Z36"/>
-                            <constraint firstItem="4eG-Ud-Fy8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AhV-es-ah5"/>
-                            <constraint firstItem="4eG-Ud-Fy8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="Ld3-Hf-xn8"/>
-                            <constraint firstItem="lzC-Al-dL3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SIF-Sk-qPI"/>
+                            <constraint firstItem="4eG-Ud-Fy8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C04-ox-IRc"/>
                             <constraint firstItem="GCj-Mj-312" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TIV-Mt-ksf"/>
-                            <constraint firstItem="lzC-Al-dL3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="208" id="U71-jy-bNF"/>
-                            <constraint firstItem="Jf1-5d-RxM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152" id="hRC-Vf-KiP"/>
+                            <constraint firstItem="4eG-Ud-Fy8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113" id="eEM-JB-QuT"/>
                             <constraint firstItem="GCj-Mj-312" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="hhk-jI-tDp"/>
                             <constraint firstItem="ddb-sU-f5Y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oe5-p8-zzs"/>
-                            <constraint firstItem="CeF-j9-wL7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ovk-kH-PWJ"/>
-                            <constraint firstItem="CeF-j9-wL7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="um1-eJ-fah"/>
                             <constraint firstItem="ddb-sU-f5Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="vLg-tO-N0w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="output" destination="lzC-Al-dL3" id="uqG-Ha-Myg"/>
-                        <outlet property="textfield" destination="CeF-j9-wL7" id="DEg-Xu-MYS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
