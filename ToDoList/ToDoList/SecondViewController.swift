@@ -21,6 +21,10 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         textField.placeholder = "e.g. do math homework"
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textField.resignFirstResponder()
+    }
 
 
 }

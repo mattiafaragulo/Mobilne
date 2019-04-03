@@ -21,6 +21,7 @@ UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell");
+        UserDefaults.standard.set(items, forKey: "items");
         cell.textLabel?.text = items[indexPath.row]
         return cell;
     }
@@ -36,6 +37,10 @@ UITableViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let itemObject = UserDefaults.standard.object(forKey: "items")
+        if let readItem = itemObject as? NSArray {
+            items = readItem as! [String]
+        }
     }
 
 
