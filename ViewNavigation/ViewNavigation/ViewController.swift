@@ -17,10 +17,12 @@ class ViewController: UIViewController {
         mySecondView.dataFromFirstControler = textField.text!
     }
     
-    @IBAction func exitFromSecondVC(segue: UIStoryboardSegue) {
-        let MySecondVC = segue.destination as! MySecondViewController
-        textField.text = MySecondVC.textField.text
+    @IBAction func exitFromSecondVC(_ segue: UIStoryboardSegue) {
+        let mySecondVC = segue.source as! MySecondViewController
+        textField.text = mySecondVC.textField.text
+        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

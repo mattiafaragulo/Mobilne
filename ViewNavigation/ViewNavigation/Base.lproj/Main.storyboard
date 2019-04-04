@@ -37,20 +37,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGW-oR-uqw">
-                                <rect key="frame" x="172" y="304" width="30" height="30"/>
-                                <state key="normal" title="Exit"/>
-                                <connections>
-                                    <segue destination="329-YW-PBX" kind="unwind" unwindAction="exitFromSecondVCWithSegue:" id="Pb4-pU-2SQ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FGW-oR-uqw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="Gdy-Ef-J3m"/>
                             <constraint firstItem="8HJ-Ok-wU1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HHN-ew-7E2"/>
                             <constraint firstItem="y54-6M-404" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RKX-2W-rFy"/>
-                            <constraint firstItem="FGW-oR-uqw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZvI-Vo-UOh"/>
                             <constraint firstItem="8HJ-Ok-wU1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="dyA-rW-fFg"/>
                             <constraint firstItem="dqa-o8-sFi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lmy-92-Pwn"/>
                             <constraint firstItem="dqa-o8-sFi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="178" id="x8W-ML-hJW"/>
@@ -64,7 +55,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="329-YW-PBX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1072.8" y="133.5832083958021"/>
         </scene>
@@ -88,20 +78,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0M-jj-oaY">
-                                <rect key="frame" x="172" y="219" width="30" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-L3-bLa">
+                                <rect key="frame" x="172" y="193" width="30" height="30"/>
                                 <state key="normal" title="Exit"/>
                                 <connections>
-                                    <segue destination="o35-0c-tLM" kind="unwind" unwindAction="exitFromSecondVCWithSegue:" id="AxE-gO-m1y"/>
+                                    <segue destination="o35-0c-tLM" kind="unwind" unwindAction="exitFromSecondVC:" id="Gmr-E9-ckg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TBY-rV-5UT" firstAttribute="centerX" secondItem="hCF-Ag-X6r" secondAttribute="centerX" id="F41-oY-IFZ"/>
+                            <constraint firstItem="nAd-L3-bLa" firstAttribute="top" secondItem="hCF-Ag-X6r" secondAttribute="top" constant="129" id="KtC-dq-tyx"/>
                             <constraint firstItem="eEx-v9-vdU" firstAttribute="top" secondItem="hCF-Ag-X6r" secondAttribute="top" constant="31" id="LML-Ht-d0I"/>
                             <constraint firstItem="eEx-v9-vdU" firstAttribute="centerX" secondItem="hCF-Ag-X6r" secondAttribute="centerX" id="Pmi-CQ-ajr"/>
+                            <constraint firstItem="nAd-L3-bLa" firstAttribute="centerX" secondItem="hCF-Ag-X6r" secondAttribute="centerX" id="R6g-62-FJc"/>
                             <constraint firstItem="TBY-rV-5UT" firstAttribute="top" secondItem="hCF-Ag-X6r" secondAttribute="top" constant="75" id="TxZ-vG-H0g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hCF-Ag-X6r"/>
