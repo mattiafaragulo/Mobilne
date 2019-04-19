@@ -14,6 +14,8 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var p: UITextField!
     
+    var registeredUsers = Array<String>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         user.placeholder = "username"
@@ -21,7 +23,12 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func doneAction(_ sender: Any) {
+        UserDefaults.standard.set(user.text, forKey: "registeredUser")
+        UserDefaults.standard.set(p.text, forKey: "registeredPassword")
+        
+    }
+    
     /*
     // MARK: - Navigation
 

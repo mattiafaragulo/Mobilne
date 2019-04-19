@@ -12,7 +12,10 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let arrayObject = UserDefaults.standard.object(forKey: "array")
+        if let readArray = arrayObject as? NSArray {
+            print(readArray)
+        }
         // Do any additional setup after loading the view.
     }
     
