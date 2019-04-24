@@ -8,7 +8,8 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UITabBarController
+                           {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +19,6 @@ class LoginViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
-    
-
     /*
     // MARK: - Navigation
 
@@ -29,5 +28,6 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+ 
 
 }

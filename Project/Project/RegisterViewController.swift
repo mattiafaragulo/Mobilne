@@ -16,6 +16,8 @@ class RegisterViewController: UIViewController {
     
     var registeredUsers = Array<String>()
     
+    var listOfItem = Array<String>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         user.placeholder = "username"
@@ -26,7 +28,6 @@ class RegisterViewController: UIViewController {
     @IBAction func doneAction(_ sender: Any) {
         UserDefaults.standard.set(user.text, forKey: "registeredUser")
         UserDefaults.standard.set(p.text, forKey: "registeredPassword")
-        
     }
     
     /*

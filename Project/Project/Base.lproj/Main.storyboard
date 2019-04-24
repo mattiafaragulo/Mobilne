@@ -34,7 +34,9 @@
                                 <rect key="frame" x="168.5" y="326" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="2oX-qu-GJd" kind="show" id="9at-H7-S9x"/>
+                                    <action selector="exitFromFirstVC:" destination="dkx-z0-nzr" eventType="touchUpInside" id="niV-HJ-Dej"/>
+                                    <action selector="logAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGQ-Ku-y5o"/>
+                                    <segue destination="sWU-Oy-xXp" kind="show" id="ksJ-qP-R34"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CV-PS-H5g">
@@ -68,42 +70,119 @@
             </objects>
             <point key="canvasLocation" x="2012" y="133.5832083958021"/>
         </scene>
-        <!--Login View Controller-->
-        <scene sceneID="5ZP-zK-ZP3">
+        <!--Add item-->
+        <scene sceneID="Rrx-Gb-4Q3">
             <objects>
-                <viewController id="2oX-qu-GJd" customClass="LoginViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6s3-LR-hE8">
+                <viewController id="jIR-aM-RXl" customClass="AddItemViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FOL-s2-hxI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sMJ-Z4-dsj">
-                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JCN-cy-xRv">
+                                <rect key="frame" x="139" y="101" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcr-nr-3bk">
+                                <rect key="frame" x="156" y="151" width="62" height="30"/>
+                                <state key="normal" title="Add item"/>
+                                <connections>
+                                    <action selector="addAction:" destination="jIR-aM-RXl" eventType="touchUpInside" id="66C-7m-Ev2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kcr-nr-3bk" firstAttribute="top" secondItem="l7d-yv-BbK" secondAttribute="top" constant="87" id="CLp-3G-Ida"/>
+                            <constraint firstItem="JCN-cy-xRv" firstAttribute="top" secondItem="l7d-yv-BbK" secondAttribute="top" constant="37" id="IEJ-zK-YMN"/>
+                            <constraint firstItem="JCN-cy-xRv" firstAttribute="centerX" secondItem="l7d-yv-BbK" secondAttribute="centerX" id="Tc7-Ip-Zcb"/>
+                            <constraint firstItem="Kcr-nr-3bk" firstAttribute="centerX" secondItem="l7d-yv-BbK" secondAttribute="centerX" id="e2l-YY-LgD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l7d-yv-BbK"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add item" id="QZy-Sh-mWc"/>
+                    <connections>
+                        <outlet property="textField" destination="JCN-cy-xRv" id="l3d-vl-0bi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Og5-Lz-AzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3785" y="483"/>
+        </scene>
+        <!--To Do List-->
+        <scene sceneID="YTu-Y4-qmB">
+            <objects>
+                <viewController id="tNa-hU-mGE" customClass="ToDoListViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iec-ah-TPC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qoj-16-tTH">
+                                <rect key="frame" x="0.0" y="133" width="375" height="485"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="hi7-0Q-6Mv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ID9-XT-5K3">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hi7-0Q-6Mv" id="NhZ-cp-Wby">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ID9-XT-5K3" id="TI0-I6-mbB">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tNa-hU-mGE" id="GgK-e9-cgj"/>
+                                    <outlet property="delegate" destination="tNa-hU-mGE" id="VFP-ir-uL1"/>
+                                </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd0-RL-tBT">
+                                <rect key="frame" x="166" y="104" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sMJ-Z4-dsj" firstAttribute="trailing" secondItem="bgi-o8-weO" secondAttribute="trailing" id="15g-9t-0jm"/>
-                            <constraint firstItem="sMJ-Z4-dsj" firstAttribute="leading" secondItem="bgi-o8-weO" secondAttribute="leading" id="305-ay-kz5"/>
-                            <constraint firstItem="sMJ-Z4-dsj" firstAttribute="top" secondItem="bgi-o8-weO" secondAttribute="top" constant="60" id="8QZ-n3-a7W"/>
-                            <constraint firstItem="sMJ-Z4-dsj" firstAttribute="bottom" secondItem="bgi-o8-weO" secondAttribute="bottom" id="jGg-FW-pYP"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="bottom" secondItem="ZGp-h6-CHm" secondAttribute="bottom" id="184-US-JOv"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="leading" secondItem="ZGp-h6-CHm" secondAttribute="leading" id="Nu5-3Q-66c"/>
+                            <constraint firstItem="xd0-RL-tBT" firstAttribute="top" secondItem="ZGp-h6-CHm" secondAttribute="top" constant="40" id="c5D-xC-sxn"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="top" secondItem="ZGp-h6-CHm" secondAttribute="top" constant="69" id="ebF-he-78X"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="trailing" secondItem="ZGp-h6-CHm" secondAttribute="trailing" id="lRE-LO-jFb"/>
+                            <constraint firstItem="xd0-RL-tBT" firstAttribute="centerX" secondItem="ZGp-h6-CHm" secondAttribute="centerX" id="sAY-H7-8ED"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bgi-o8-weO"/>
+                        <viewLayoutGuide key="safeArea" id="ZGp-h6-CHm"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="To Do List" id="oI1-V9-A2R"/>
+                    <connections>
+                        <outlet property="label" destination="xd0-RL-tBT" id="NYJ-bO-PN8"/>
+                        <outlet property="tableView" destination="Qoj-16-tTH" id="mcX-QZ-UsM"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xum-4G-WB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGS-Lf-0Zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2684" y="129.98500749625188"/>
+            <point key="canvasLocation" x="3784.8000000000002" y="-194.75262368815595"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="JVq-3v-AZm">
+            <objects>
+                <tabBarController id="sWU-Oy-xXp" customClass="LoginViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qaF-td-dMK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tNa-hU-mGE" kind="relationship" relationship="viewControllers" id="deQ-tO-fUD"/>
+                        <segue destination="jIR-aM-RXl" kind="relationship" relationship="viewControllers" id="IvR-Jj-f2H"/>
+                        <segue destination="foi-dF-Yiq" kind="unwind" unwindAction="exitFromFirstVC:" id="ALt-hp-mtJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xbo-vN-hmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="foi-dF-Yiq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2812" y="137"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="TUR-hr-AaK">
