@@ -55,6 +55,11 @@ class RegisterViewController: UIViewController {
     
      func cancelActionHandler(action: UIAlertAction) {}
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        user.resignFirstResponder()
+        p.resignFirstResponder()
+    }
+    
     /*
     // MARK: - Navigation
 

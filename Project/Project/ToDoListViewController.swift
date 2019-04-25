@@ -42,7 +42,7 @@ class ToDoListViewController: UIViewController,
         // Do any additional setup after loading the view, typically from a nib.
         let title = UserDefaults.standard.object(forKey: "titleLabel")
         if let readTitle = title as? String {
-            label.text = "This is the list of user: " + readTitle
+            label.text = "User: " + readTitle
             let array = UserDefaults.standard.object(forKey: readTitle)
             if let readArray = array as? NSArray {
                 items = readArray as! [String]

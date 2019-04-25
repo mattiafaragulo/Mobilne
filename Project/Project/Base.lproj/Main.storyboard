@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,16 +46,33 @@
                                     <segue destination="eLg-yC-DQx" kind="show" id="AHE-JW-ulu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dm-Kt-YJo">
+                                <rect key="frame" x="130" y="400" width="115" height="30"/>
+                                <state key="normal" title="Remove account"/>
+                                <connections>
+                                    <action selector="removeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVn-Bq-RYE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login and show your list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRg-EK-iTX">
+                                <rect key="frame" x="95.5" y="151" width="184" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="92B-hn-mwP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="262" id="CNQ-I5-Qeb"/>
                             <constraint firstItem="5CV-PS-H5g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="D9e-S3-h7h"/>
+                            <constraint firstItem="8dm-Kt-YJo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="336" id="DX1-da-gmn"/>
+                            <constraint firstItem="uRg-EK-iTX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EEU-yb-8Y0"/>
                             <constraint firstItem="7Ks-8K-VhA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="218" id="KD3-k8-Zw8"/>
                             <constraint firstItem="7Ks-8K-VhA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OU3-57-x7k"/>
                             <constraint firstItem="92B-hn-mwP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QH9-zC-hjH"/>
                             <constraint firstItem="5CV-PS-H5g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="coA-r2-ZDN"/>
                             <constraint firstItem="ypE-cF-VOn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="jKw-Ii-XnY"/>
+                            <constraint firstItem="8dm-Kt-YJo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="k2i-49-DLN"/>
+                            <constraint firstItem="uRg-EK-iTX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="tMO-CY-Hp4"/>
                             <constraint firstItem="ypE-cF-VOn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="x4f-s0-2cc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -73,7 +90,7 @@
         <!--Add item-->
         <scene sceneID="Rrx-Gb-4Q3">
             <objects>
-                <viewController id="jIR-aM-RXl" customClass="AddItemViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jIR-aM-RXl" customClass="AddItemViewController" customModule="LoginToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FOL-s2-hxI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,17 +102,35 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcr-nr-3bk">
-                                <rect key="frame" x="156" y="151" width="62" height="30"/>
+                                <rect key="frame" x="156.5" y="151" width="62" height="30"/>
                                 <state key="normal" title="Add item"/>
                                 <connections>
                                     <action selector="addAction:" destination="jIR-aM-RXl" eventType="touchUpInside" id="66C-7m-Ev2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="remove your account -&gt; clear  list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZr-TI-va6">
+                                <rect key="frame" x="69" y="216" width="418" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAU-3a-gc3">
+                                <rect key="frame" x="156" y="283" width="65" height="30"/>
+                                <state key="normal" title="Clear List"/>
+                                <connections>
+                                    <action selector="ClearAction:" destination="jIR-aM-RXl" eventType="touchUpInside" id="Fbn-Pe-zvA"/>
+                                    <segue destination="l75-25-hdQ" kind="unwind" unwindAction="exitClearAction:" id="LIy-xr-9N1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yZr-TI-va6" firstAttribute="centerX" secondItem="l7d-yv-BbK" secondAttribute="centerX" id="5Z3-c8-I6c"/>
                             <constraint firstItem="Kcr-nr-3bk" firstAttribute="top" secondItem="l7d-yv-BbK" secondAttribute="top" constant="87" id="CLp-3G-Ida"/>
                             <constraint firstItem="JCN-cy-xRv" firstAttribute="top" secondItem="l7d-yv-BbK" secondAttribute="top" constant="37" id="IEJ-zK-YMN"/>
+                            <constraint firstItem="iAU-3a-gc3" firstAttribute="top" secondItem="l7d-yv-BbK" secondAttribute="top" constant="125" id="JV4-gL-a0b"/>
+                            <constraint firstItem="yZr-TI-va6" firstAttribute="top" secondItem="l7d-yv-BbK" secondAttribute="top" constant="152" id="Jxk-p8-seI"/>
+                            <constraint firstItem="iAU-3a-gc3" firstAttribute="centerX" secondItem="l7d-yv-BbK" secondAttribute="centerX" id="KZ5-V1-Xek"/>
                             <constraint firstItem="JCN-cy-xRv" firstAttribute="centerX" secondItem="l7d-yv-BbK" secondAttribute="centerX" id="Tc7-Ip-Zcb"/>
                             <constraint firstItem="Kcr-nr-3bk" firstAttribute="centerX" secondItem="l7d-yv-BbK" secondAttribute="centerX" id="e2l-YY-LgD"/>
                         </constraints>
@@ -107,13 +142,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Og5-Lz-AzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="l75-25-hdQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3785" y="483"/>
+            <point key="canvasLocation" x="3784.8000000000002" y="482.60869565217394"/>
         </scene>
         <!--To Do List-->
         <scene sceneID="YTu-Y4-qmB">
             <objects>
-                <viewController id="tNa-hU-mGE" customClass="ToDoListViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tNa-hU-mGE" customClass="ToDoListViewController" customModule="LoginToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iec-ah-TPC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +173,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd0-RL-tBT">
-                                <rect key="frame" x="166" y="104" width="42" height="21"/>
+                                <rect key="frame" x="166.5" y="104" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -167,7 +203,7 @@
         <!--Login View Controller-->
         <scene sceneID="JVq-3v-AZm">
             <objects>
-                <tabBarController id="sWU-Oy-xXp" customClass="LoginViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="sWU-Oy-xXp" customClass="LoginViewController" customModule="LoginToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qaF-td-dMK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -187,7 +223,7 @@
         <!--Register View Controller-->
         <scene sceneID="TUR-hr-AaK">
             <objects>
-                <viewController id="eLg-yC-DQx" customClass="RegisterViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eLg-yC-DQx" customClass="RegisterViewController" customModule="LoginToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xy5-HW-Dmn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

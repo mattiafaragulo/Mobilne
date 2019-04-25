@@ -35,8 +35,21 @@ class AddItemViewController: UIViewController {
         if let readTitle = title as? String {
             UserDefaults.standard.set(listOfUser, forKey: readTitle)
         }
-        
     }
+    
+    @IBAction func ClearAction(_ sender: Any) {
+        listOfUser.removeAll()
+        let title = UserDefaults.standard.object(forKey: "titleLabel")
+        if let readTitle = title as? String {
+            UserDefaults.standard.set(listOfUser, forKey: readTitle)
+            let alert = UIAlertController(title: "the list of " + readTitle + " is empty now", message: "", preferredStyle: .alert  );
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelActionHandler);
+            alert.addAction(cancelAction);
+            self.present(alert, animated: true, completion: nil);
+        }
+    }
+    
+    func cancelActionHandler(action: UIAlertAction) {}
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         textField.resignFirstResponder()
