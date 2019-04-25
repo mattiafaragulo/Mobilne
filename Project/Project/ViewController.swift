@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logAction(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Alert", message: "Login is wrong!", preferredStyle: .alert  );
+        let alert = UIAlertController(title: "Alert", message: "Login is incorrect!", preferredStyle: .alert  );
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelActionHandler);
         alert.addAction(cancelAction)
         let arrayObject = UserDefaults.standard.object(forKey: "array")
@@ -47,8 +47,10 @@ class ViewController: UIViewController {
     
     @IBAction func exitFromSecondVC(_ segue: UIStoryboardSegue) {
         let RegisterVC = segue.source as! RegisterViewController
-        registeredUsers.append(RegisterVC.user.text!+" "+RegisterVC.p.text!)
-        UserDefaults.standard.set(registeredUsers, forKey: "array")
+        if(RegisterVC.p.text!.count > 6) {
+            registeredUsers.append(RegisterVC.user.text!+" "+RegisterVC.p.text!)
+            UserDefaults.standard.set(registeredUsers, forKey: "array")
+        }
     }
     
 }

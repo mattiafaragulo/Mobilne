@@ -26,9 +26,34 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func doneAction(_ sender: Any) {
-        UserDefaults.standard.set(user.text, forKey: "registeredUser")
-        UserDefaults.standard.set(p.text, forKey: "registeredPassword")
+        let alert = UIAlertController(title: "Alert", message: "The username already exist!", preferredStyle: .alert  );
+        let alert2 = UIAlertController(title: "Alert", message: "Password must contains at least 6 words", preferredStyle: .alert  );
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelActionHandler);
+        alert.addAction(cancelAction)
+        alert2.addAction(cancelAction)
+        let arrayObject = UserDefaults.standard.object(forKey: "array")
+        if let readArray = arrayObject as? NSArray {
+            for i in readArray {
+                if let index = (i as! String).index(of: " ") {
+                    let substring = (i as! String)[..<index]
+                    let username = String(substring)
+                    if username.elementsEqual(user.text!) {
+                        self.present(alert, animated: true, completion: nil);
+                        return ;
+                    }
+                }
+            }
+        }
+        if(p.text!.count < 6) {
+            self.present(alert2, animated: true, completion: nil);
+        }
+        else{
+            UserDefaults.standard.set(user.text, forKey: "registeredUser")
+            UserDefaults.standard.set(p.text, forKey: "registeredPassword")
+        }
     }
+    
+     func cancelActionHandler(action: UIAlertAction) {}
     
     /*
     // MARK: - Navigation
