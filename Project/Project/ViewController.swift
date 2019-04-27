@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var removePassTextField = UITextField ()
     
     var registeredUsers = Array<String>()
+    var removeListOfUser = Array<String>()
 
     
     override func viewDidLoad() {
@@ -38,8 +39,8 @@ class ViewController: UIViewController {
         alert.addAction(cancelAction)
         let arrayObject = UserDefaults.standard.object(forKey: "array")
         let user = username.text!+" "+password.text!
-        if let readArray = arrayObject as? NSArray {
-            if(!readArray.contains(user)) {
+        if let readArray = arrayObject as? [String] {
+            if((!readArray.contains(user)) || (readArray.isEmpty)) {
                 self.present(alert, animated: true, completion: nil);
             }
         }
@@ -49,6 +50,18 @@ class ViewController: UIViewController {
     func cancelActionHandler(action: UIAlertAction) {}
     
     @IBAction func exitFromSecondVC(_ segue: UIStoryboardSegue) {
+        let arrayObject = UserDefaults.standard.object(forKey: "array")
+        if let readArray = arrayObject as? NSArray {
+            for i in readArray {
+                if let index = (i as! String).index(of: " ") {
+                    let substring = (i as! String)[..<index]
+                    let user = String(substring)
+                    if user.elementsEqual(username.text!) {
+                        return ;
+                    }
+                }
+            }
+        }
         let RegisterVC = segue.source as! RegisterViewController
         if(RegisterVC.p.text!.count >= 6) {
             registeredUsers.append(RegisterVC.user.text!+" "+RegisterVC.p.text!)
@@ -86,8 +99,16 @@ class ViewController: UIViewController {
         else {
             registeredUsers.remove(at: index as! Int)
             UserDefaults.standard.set(registeredUsers, forKey: "array")
+            let listOfUser = UserDefaults.standard.object(forKey: removeUsrTextField.text!)
+            if let readListOfUser = listOfUser as? NSArray {
+                removeListOfUser = readListOfUser as! [String]
+            }
+            removeListOfUser.removeAll()
+            UserDefaults.standard.set(removeListOfUser, forKey: removeUsrTextField.text!)
             self.present(alert1, animated: true, completion: nil);
         }
+        
+        
 
     }
     
