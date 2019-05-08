@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="krE-ED-xWb">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ypE-cF-VOn">
@@ -25,7 +25,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92B-hn-mwP">
-                                <rect key="frame" x="188" y="225" width="38" height="30"/>
+                                <rect key="frame" x="141" y="225" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="exitFromFirstVC:" destination="dkx-z0-nzr" eventType="touchUpInside" id="niV-HJ-Dej"/>
@@ -34,14 +34,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CV-PS-H5g">
-                                <rect key="frame" x="178.66666666666666" y="263" width="57" height="30"/>
+                                <rect key="frame" x="131.5" y="263" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <segue destination="eLg-yC-DQx" kind="show" id="AHE-JW-ulu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login and show your list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRg-EK-iTX">
-                                <rect key="frame" x="115" y="84" width="184" height="21"/>
+                                <rect key="frame" x="68" y="84" width="184" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dm-Kt-YJo">
-                                <rect key="frame" x="149.66666666666666" y="301" width="114.99999999999997" height="30"/>
+                                <rect key="frame" x="102.5" y="301" width="115" height="30"/>
                                 <state key="normal" title="Remove account"/>
                                 <connections>
                                     <action selector="removeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVn-Bq-RYE"/>
@@ -92,7 +92,7 @@
             <objects>
                 <viewController id="jIR-aM-RXl" customClass="AddItemViewController" customModule="LoginToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FOL-s2-hxI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JCN-cy-xRv">
@@ -102,28 +102,28 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcr-nr-3bk">
-                                <rect key="frame" x="176" y="151" width="62" height="30"/>
+                                <rect key="frame" x="129" y="151" width="62" height="30"/>
                                 <state key="normal" title="Add item"/>
                                 <connections>
                                     <action selector="addAction:" destination="jIR-aM-RXl" eventType="touchUpInside" id="66C-7m-Ev2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkP-ah-yUD">
-                                <rect key="frame" x="152" y="189" width="110" height="30"/>
-                                <state key="normal" title="Remove an item"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ag-Tv-hOx">
+                                <rect key="frame" x="136" y="183" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
                                 <connections>
-                                    <action selector="removeAction:" destination="jIR-aM-RXl" eventType="touchUpInside" id="D0b-wR-5BY"/>
+                                    <segue destination="Y8H-rg-aai" kind="unwind" unwindAction="logOutAction:" id="FUM-r4-QBy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6ag-Tv-hOx" firstAttribute="top" secondItem="l7d-yv-BbK" secondAttribute="top" constant="119" id="A7t-Tb-0zQ"/>
                             <constraint firstItem="Kcr-nr-3bk" firstAttribute="top" secondItem="l7d-yv-BbK" secondAttribute="top" constant="87" id="CLp-3G-Ida"/>
-                            <constraint firstItem="OkP-ah-yUD" firstAttribute="top" secondItem="l7d-yv-BbK" secondAttribute="top" constant="125" id="HrP-U1-uQN"/>
+                            <constraint firstItem="6ag-Tv-hOx" firstAttribute="centerX" secondItem="l7d-yv-BbK" secondAttribute="centerX" id="EvF-XP-OzD"/>
                             <constraint firstItem="JCN-cy-xRv" firstAttribute="top" secondItem="l7d-yv-BbK" secondAttribute="top" constant="37" id="IEJ-zK-YMN"/>
                             <constraint firstItem="JCN-cy-xRv" firstAttribute="centerX" secondItem="l7d-yv-BbK" secondAttribute="centerX" id="Tc7-Ip-Zcb"/>
                             <constraint firstItem="Kcr-nr-3bk" firstAttribute="centerX" secondItem="l7d-yv-BbK" secondAttribute="centerX" id="e2l-YY-LgD"/>
-                            <constraint firstItem="OkP-ah-yUD" firstAttribute="centerX" secondItem="l7d-yv-BbK" secondAttribute="centerX" id="fyh-Y7-pl1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l7d-yv-BbK"/>
                     </view>
@@ -133,26 +133,27 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Og5-Lz-AzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Y8H-rg-aai" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3784.8000000000002" y="482.60869565217394"/>
+            <point key="canvasLocation" x="3784.057971014493" y="482.60869565217394"/>
         </scene>
         <!--To Do List-->
         <scene sceneID="YTu-Y4-qmB">
             <objects>
                 <viewController id="tNa-hU-mGE" customClass="ToDoListViewController" customModule="LoginToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iec-ah-TPC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qoj-16-tTH">
-                                <rect key="frame" x="0.0" y="133" width="414" height="554"/>
+                                <rect key="frame" x="0.0" y="133" width="320" height="386"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ID9-XT-5K3">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ID9-XT-5K3" id="TI0-I6-mbB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -163,26 +164,41 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd0-RL-tBT">
-                                <rect key="frame" x="186" y="104" width="42" height="21"/>
+                                <rect key="frame" x="139" y="72" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRz-Ic-m0b">
+                                <rect key="frame" x="105" y="101" width="110" height="30"/>
+                                <state key="normal" title="Remove an item"/>
+                                <connections>
+                                    <action selector="removeAct:" destination="tNa-hU-mGE" eventType="touchUpInside" id="zBr-Ip-OAw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Qoj-16-tTH" firstAttribute="bottom" secondItem="ZGp-h6-CHm" secondAttribute="bottom" id="184-US-JOv"/>
-                            <constraint firstItem="Qoj-16-tTH" firstAttribute="leading" secondItem="ZGp-h6-CHm" secondAttribute="leading" id="Nu5-3Q-66c"/>
-                            <constraint firstItem="xd0-RL-tBT" firstAttribute="top" secondItem="ZGp-h6-CHm" secondAttribute="top" constant="40" id="c5D-xC-sxn"/>
-                            <constraint firstItem="Qoj-16-tTH" firstAttribute="top" secondItem="ZGp-h6-CHm" secondAttribute="top" constant="69" id="ebF-he-78X"/>
-                            <constraint firstItem="Qoj-16-tTH" firstAttribute="trailing" secondItem="ZGp-h6-CHm" secondAttribute="trailing" id="lRE-LO-jFb"/>
-                            <constraint firstItem="xd0-RL-tBT" firstAttribute="centerX" secondItem="ZGp-h6-CHm" secondAttribute="centerX" id="sAY-H7-8ED"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="trailing" secondItem="ZGp-h6-CHm" secondAttribute="trailing" id="0vV-Rf-Dvw"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="bottom" secondItem="ZGp-h6-CHm" secondAttribute="bottom" id="5bV-Kh-gfH"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="top" secondItem="fRz-Ic-m0b" secondAttribute="bottom" constant="2" id="7U4-Ip-gBs"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="bottom" secondItem="ZGp-h6-CHm" secondAttribute="bottom" id="CAP-ib-67L"/>
+                            <constraint firstItem="xd0-RL-tBT" firstAttribute="top" secondItem="ZGp-h6-CHm" secondAttribute="top" constant="8" id="JtT-2i-rMa"/>
+                            <constraint firstItem="fRz-Ic-m0b" firstAttribute="centerX" secondItem="ZGp-h6-CHm" secondAttribute="centerX" id="Vpo-73-FOc"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="centerX" secondItem="fRz-Ic-m0b" secondAttribute="centerX" id="h99-YT-JKj"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="top" secondItem="fRz-Ic-m0b" secondAttribute="bottom" constant="2" id="jNO-hp-5hg"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="leading" secondItem="ZGp-h6-CHm" secondAttribute="leading" id="nAM-0g-fyi"/>
+                            <constraint firstItem="xd0-RL-tBT" firstAttribute="centerX" secondItem="ZGp-h6-CHm" secondAttribute="centerX" id="sEd-nz-7Gf"/>
+                            <constraint firstItem="fRz-Ic-m0b" firstAttribute="top" secondItem="ZGp-h6-CHm" secondAttribute="top" constant="37" id="vpD-sd-TF0"/>
+                            <constraint firstItem="Qoj-16-tTH" firstAttribute="leading" secondItem="iec-ah-TPC" secondAttribute="leading" id="wSw-lP-ntd"/>
+                            <constraint firstItem="fRz-Ic-m0b" firstAttribute="centerX" secondItem="ZGp-h6-CHm" secondAttribute="centerX" id="xcE-46-C2F"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZGp-h6-CHm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="To Do List" id="oI1-V9-A2R"/>
                     <connections>
                         <outlet property="label" destination="xd0-RL-tBT" id="NYJ-bO-PN8"/>
+                        <outlet property="removeItemButton" destination="fRz-Ic-m0b" id="MLj-WN-mP1"/>
                         <outlet property="tableView" destination="Qoj-16-tTH" id="mcX-QZ-UsM"/>
                     </connections>
                 </viewController>
@@ -202,11 +218,9 @@
                     <connections>
                         <segue destination="tNa-hU-mGE" kind="relationship" relationship="viewControllers" id="deQ-tO-fUD"/>
                         <segue destination="jIR-aM-RXl" kind="relationship" relationship="viewControllers" id="IvR-Jj-f2H"/>
-                        <segue destination="foi-dF-Yiq" kind="unwind" unwindAction="exitFromFirstVC:" id="ALt-hp-mtJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbo-vN-hmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="foi-dF-Yiq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2812" y="137"/>
         </scene>
@@ -215,7 +229,7 @@
             <objects>
                 <viewController id="eLg-yC-DQx" customClass="RegisterViewController" customModule="LoginToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xy5-HW-Dmn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbY-w7-a1C">
@@ -225,13 +239,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account: username and password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSH-y0-Qkd">
-                                <rect key="frame" x="39" y="95" width="336" height="21"/>
+                                <rect key="frame" x="-8" y="95" width="336" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agA-W7-1UW">
-                                <rect key="frame" x="188.66666666666666" y="246" width="37" height="30"/>
+                                <rect key="frame" x="141.5" y="246" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="doneAction:" destination="eLg-yC-DQx" eventType="touchUpInside" id="KNm-uA-oS7"/>
@@ -274,7 +288,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="krE-ED-xWb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iKA-Qb-OKz">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

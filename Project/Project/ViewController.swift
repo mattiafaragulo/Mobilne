@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     var registeredUsers = Array<String>()
     var removeListOfUser = Array<String>()
+    
 
     
     override func viewDidLoad() {
@@ -67,6 +68,11 @@ class ViewController: UIViewController {
             registeredUsers.append(RegisterVC.user.text!+" "+RegisterVC.p.text!)
             UserDefaults.standard.set(registeredUsers, forKey: "array")
         }
+    }
+    
+    @IBAction func logOutAction(_ segue: UIStoryboardSegue) {
+        username.text! = ""
+        password.text! = ""
     }
     
     @IBAction func removeAction(_ sender: UIButton) {

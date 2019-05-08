@@ -18,6 +18,7 @@ class RegisterViewController: UIViewController {
     
     var listOfItem = Array<String>()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         user.placeholder = "username"
