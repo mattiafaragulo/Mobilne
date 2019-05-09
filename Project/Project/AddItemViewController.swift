@@ -39,10 +39,6 @@ class AddItemViewController: UIViewController  {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        textField.resignFirstResponder()
-    }
-    
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
@@ -50,7 +46,10 @@ class AddItemViewController: UIViewController  {
         self.tabBarController?.navigationItem.hidesBackButton = true
     }
     
-   
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textField.resignFirstResponder()
+    }
+    
     /*
     // MARK: - Navigation
 

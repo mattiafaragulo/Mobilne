@@ -15,7 +15,6 @@
 		BD35A2F2225F161C0034FEF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD35A2F1225F161C0034FEF1 /* Assets.xcassets */; };
 		BD35A2F5225F161C0034FEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD35A2F3225F161C0034FEF1 /* LaunchScreen.storyboard */; };
 		BD35A2FD225F1B5E0034FEF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35A2FC225F1B5E0034FEF1 /* LoginViewController.swift */; };
-		BD35A2FF225F1B790034FEF1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35A2FE225F1B790034FEF1 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		BD35A2F4225F161C0034FEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD35A2F6225F161C0034FEF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD35A2FC225F1B5E0034FEF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BD35A2FE225F1B790034FEF1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +65,6 @@
 				BD35A2EE225F161B0034FEF1 /* Main.storyboard */,
 				49CC587422709FD90043231C /* AddItemViewController.swift */,
 				49CC587222709ED10043231C /* ToDoListViewController.swift */,
-				BD35A2FE225F1B790034FEF1 /* RegisterViewController.swift */,
 				BD35A2FC225F1B5E0034FEF1 /* LoginViewController.swift */,
 				BD35A2F1225F161C0034FEF1 /* Assets.xcassets */,
 				BD35A2F3225F161C0034FEF1 /* LaunchScreen.storyboard */,
@@ -151,7 +148,6 @@
 				BD35A2ED225F161B0034FEF1 /* ViewController.swift in Sources */,
 				BD35A2EB225F161B0034FEF1 /* AppDelegate.swift in Sources */,
 				49CC587322709ED10043231C /* ToDoListViewController.swift in Sources */,
-				BD35A2FF225F1B790034FEF1 /* RegisterViewController.swift in Sources */,
 				49CC587522709FDA0043231C /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

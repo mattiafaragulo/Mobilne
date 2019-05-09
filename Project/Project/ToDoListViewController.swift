@@ -58,7 +58,7 @@ class ToDoListViewController: UIViewController,
             if let readListOfUser = listOfUser as? NSArray {
                 newListOfUser = readListOfUser as! [String]
             }
-            if Int(removeTextField.text!)! > newListOfUser.count {
+            if Int(removeTextField.text!)! > (newListOfUser.count-1) {
                 self.present(alert2, animated: true, completion: nil);
             }
             else{
@@ -110,7 +110,6 @@ class ToDoListViewController: UIViewController,
         
         self.tabBarController?.navigationItem.hidesBackButton = true
     }
-    
 
     
     // MARK: - Navigation

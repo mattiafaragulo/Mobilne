@@ -16,12 +16,13 @@ class ViewController: UIViewController {
     
     var removeUsrTextField = UITextField ()
     var removePassTextField = UITextField ()
+    var registerUsrTextField = UITextField ()
+    var registerPassTextField = UITextField ()
     
     var registeredUsers = Array<String>()
     var removeListOfUser = Array<String>()
     
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,26 +50,6 @@ class ViewController: UIViewController {
     }
     
     func cancelActionHandler(action: UIAlertAction) {}
-    
-    @IBAction func exitFromSecondVC(_ segue: UIStoryboardSegue) {
-        let arrayObject = UserDefaults.standard.object(forKey: "array")
-        if let readArray = arrayObject as? NSArray {
-            for i in readArray {
-                if let index = (i as! String).index(of: " ") {
-                    let substring = (i as! String)[..<index]
-                    let user = String(substring)
-                    if user.elementsEqual(username.text!) {
-                        return ;
-                    }
-                }
-            }
-        }
-        let RegisterVC = segue.source as! RegisterViewController
-        if(RegisterVC.p.text!.count >= 6) {
-            registeredUsers.append(RegisterVC.user.text!+" "+RegisterVC.p.text!)
-            UserDefaults.standard.set(registeredUsers, forKey: "array")
-        }
-    }
     
     @IBAction func logOutAction(_ segue: UIStoryboardSegue) {
         username.text! = ""
@@ -114,23 +95,77 @@ class ViewController: UIViewController {
             self.present(alert1, animated: true, completion: nil);
         }
         
-        
-
     }
     
     func alertTextFieldConfiguration1(textField: UITextField) {
-        removeUsrTextField.placeholder = "username";
         removeUsrTextField = textField
     }
     
     func alertTextFieldConfiguration2(textField: UITextField) {
-        removePassTextField.placeholder = "password";
         removePassTextField = textField
+    }
+    
+    func alertTextFieldConfiguration3(textField: UITextField) {
+        registerUsrTextField = textField
+    }
+    
+    func alertTextFieldConfiguration4(textField: UITextField) {
+        registerPassTextField = textField
+    }
+    
+    @IBAction func registerAction(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Register your account", message: "Insert username and password", preferredStyle: .alert  );
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelActionHandler);
+        alert.addAction(cancelAction);
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: okActionHandler2);
+        
+        alert.addAction(okAction)
+        
+        alert.addTextField(configurationHandler: alertTextFieldConfiguration3);
+        alert.addTextField(configurationHandler: alertTextFieldConfiguration4)
+        
+        self.present(alert, animated: true, completion: nil);
+    
+    }
+    
+    func okActionHandler2(action: UIAlertAction) {
+        let alert1 = UIAlertController(title: "Alert", message: "The username has already exist!", preferredStyle: .alert  );
+        let alert2 = UIAlertController(title: "Alert", message: "Password must contains at least 6 characters", preferredStyle: .alert );
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelActionHandler);
+        alert1.addAction(cancelAction)
+        alert2.addAction(cancelAction)
+        let arrayObject = UserDefaults.standard.object(forKey: "array")
+        if let readArray = arrayObject as? NSArray {
+            for i in readArray {
+                if let index = (i as! String).index(of: " ") {
+                    let substring = (i as! String)[..<index]
+                    let username = String(substring)
+                    if username.elementsEqual(registerUsrTextField.text!) {
+                        self.present(alert1, animated: true, completion: nil);
+                        return ;
+                    }
+                }
+            }
+        }
+        if(registerPassTextField.text!.count >= 6) {
+            registeredUsers.append(registerUsrTextField.text!+" "+registerPassTextField.text!)
+            UserDefaults.standard.set(registeredUsers, forKey: "array")
+        }
+        else{
+            self.present(alert2, animated: true, completion: nil);
+            return ;
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         username.resignFirstResponder()
         password.resignFirstResponder()
+        removeUsrTextField.resignFirstResponder()
+        removePassTextField.resignFirstResponder()
+        registerUsrTextField.resignFirstResponder()
+        registerPassTextField.resignFirstResponder()
     }
     
 }
